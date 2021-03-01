@@ -72,7 +72,7 @@ public class TickTackToe {
             do {
                 y = random.nextInt(SIZE);
                 x = random.nextInt(SIZE);
-            } while (isCellValid(x, y));
+            } while (!isCellValid(x, y));
         } else {
             for (int i = 0; i < SIZE; i++) {
                 for (int j = 0; j < SIZE; j++) {
