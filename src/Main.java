@@ -1,17 +1,28 @@
 public class Main {
     public static void main(String[] args) {
-    Animal a1 = new Animal();
-    a1.run();
-    a1.run();
-    Animal a2 = new Animal();
-    Dog d1 = new Dog("Vovan");
-    Dog d2 = new Dog("BOSS");
-    Cat c1 = new Cat("BARSIK");
-    Cat c2 = new Cat("MURZIK");
-    d1.run(100);
-    d1.swim(10);
-    c1.run(100);
-    c1.swim();
+
+        Kitty cat = new Kitty("Barsik", 6);
+        Plate plate = new Plate(100);
+        plate.info();
+        cat.eat(plate);
+        plate.info();
+
+        Kitty [] cats = new Kitty[5];
+        cats[0]=new Kitty("BOSS", 10);
+        cats[1]=new Kitty("BARSIK", 8);
+        cats[2]=new Kitty("KOMP0T", 11);
+        cats[3]=new Kitty("TOM", 17);
+        cats[4]=new Kitty("RIKOLIT", 70);
+
+        for (Kitty c1: cats) {
+            c1.eat(plate);
+        }
+        plate.info();
+        plate.upEat(plate.food);
+        plate.info();
+
     }
+
+
 }
 
